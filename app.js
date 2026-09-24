@@ -2,7 +2,7 @@
 // Sayfanın HTML'i Türkçe yazılır; İngilizce metinler aşağıdaki sözlükten gelir.
 
 const INVITE_URL = "https://discord.com/oauth2/authorize?client_id=1135134099061878795";
-const SUPPORT_URL = ""; // destek sunucusunun davet linki (boşken düğme gizlenir)
+const SUPPORT_URL = "https://discord.gg/n2ZxqyrqaU"; // destek sunucusu (boşken düğme gizlenir)
 
 const EN = {
   nav_features: "Features",
