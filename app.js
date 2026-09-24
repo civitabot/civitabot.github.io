@@ -37,8 +37,8 @@ const EN = {
   f_festivals_text: "Fireworks at New Year, blossoms in spring: on special days the city is decorated and bonuses arrive.",
   f_welcome_title: "Welcome card",
   f_welcome_text: "New members are greeted with a laurel wreath over your server's own city.",
-  f_mod_title: "Moderation",
-  f_mod_text: "Warn, timeout, kick, ban, purge messages and a moderation log. All based on Discord permissions.",
+  f_mod_title: "Moderation and support",
+  f_mod_text: "Warn, timeout, kick, ban, purge messages, a moderation log and support tickets in private threads. All based on Discord permissions.",
   gallery_title: "Scenes from the city",
   gallery_lead: "Every picture is drawn by Civita itself, based on the city as it is right now.",
   young_alt: "A newly founded city: a small temple and scaffolding over an olive grove",
@@ -81,7 +81,7 @@ const COMMANDS = {
       ["/oyun refleks", "Refleks oyunu"],
     ]],
     ["Yöneticiler için", [
-      ["/ayarlar", "Dil, duyuru kanalı, inşa modu, unvan rolleri, hoş geldin, otomatik rol, mod-log, dünya sıralaması, festivaller"],
+      ["/ayarlar", "Dil, duyuru kanalı, inşa modu, unvan rolleri, hoş geldin, otomatik rol, mod-log, destek talepleri, dünya sıralaması, festivaller"],
       ["/inşa", "Sıradaki projeyi seç (yönetici modunda)"],
       ["/pazar", "Agora'da Mermer ↔ Zeytin takası"],
     ]],
@@ -90,6 +90,7 @@ const COMMANDS = {
       ["/sustur", "Geçici susturma"],
       ["/at · /yasakla", "Sunucudan atma ve yasaklama"],
       ["/temizle", "Son mesajları silme"],
+      ["/talep ekle · /talep çıkar · /talep kapat", "Destek talepleri"],
     ]],
   ],
   en: [
@@ -104,7 +105,7 @@ const COMMANDS = {
       ["/game reflex", "Reflex game"],
     ]],
     ["For admins", [
-      ["/settings", "Language, announcements, build mode, title roles, welcome, auto role, mod log, world ranking, festivals"],
+      ["/settings", "Language, announcements, build mode, title roles, welcome, auto role, mod log, support tickets, world ranking, festivals"],
       ["/build", "Choose the next project (admin mode)"],
       ["/market", "Trade Marble ↔ Olives in the Agora"],
     ]],
@@ -113,6 +114,7 @@ const COMMANDS = {
       ["/timeout", "Temporary mute"],
       ["/kick · /ban", "Kick and ban"],
       ["/purge", "Delete recent messages"],
+      ["/ticket add · /ticket remove · /ticket close", "Support tickets"],
     ]],
   ],
 };
