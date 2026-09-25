@@ -11,7 +11,7 @@ const EN = {
   tagline: "Turn your Discord server into a living ancient city that your members build together.",
   add: "Add to Discord",
   support: "Support Server",
-  hero_alt: "A Civita city with a temple, agora, amphitheatre and triumphal arch, decorated with bunting",
+  hero_alt: "A Civita city with a temple, agora, amphitheatre, bathhouse, a library on the cliff, an aqueduct and a triumphal arch, decorated with bunting",
   hero_caption: "A real Civita city: every building was raised by its members.",
   how_title: "How does it work?",
   how_lead: "Nobody has to do anything extra: the livelier your server, the faster your city grows.",
@@ -26,7 +26,7 @@ const EN = {
   f_picture_title: "A drawn city",
   f_picture_text: "Type /city to see a picture of your city. The sky follows the time of day: dawn, day, sunset, starry night.",
   f_games_title: "Mini games",
-  f_games_text: "Trivia with 200+ questions and Reflex for quick fingers. Once you build an Amphitheatre, winners earn Coins for the city.",
+  f_games_text: "Trivia with 200+ questions, Reflex for quick fingers and Timeline, unlocked by the Library. Once you build an Amphitheatre, winners earn Coins for the city.",
   f_vitality_title: "Vitality",
   f_vitality_text: "How many people contribute each day sets your city's vitality. Lively cities produce more, and their streets fill up.",
   f_titles_title: "Titles and roles",
@@ -79,6 +79,7 @@ const COMMANDS = {
       ["/festivaller", "Festival takvimi"],
       ["/oyun bilgi", "Bilgi Yarışması"],
       ["/oyun refleks", "Refleks oyunu"],
+      ["/oyun tarih-sırası", "Tarih Sırası (Kütüphane gerekir)"],
     ]],
     ["Yöneticiler için", [
       ["/ayarlar", "Dil, duyuru kanalı, inşa modu, unvan rolleri, hoş geldin, otomatik rol, mod-log, destek talepleri, doğrulama, dünya sıralaması, festivaller"],
@@ -103,6 +104,7 @@ const COMMANDS = {
       ["/festivals", "Festival calendar"],
       ["/game trivia", "Trivia"],
       ["/game reflex", "Reflex game"],
+      ["/game timeline", "Timeline (needs a Library)"],
     ]],
     ["For admins", [
       ["/settings", "Language, announcements, build mode, title roles, welcome, auto role, mod log, support tickets, verification, world ranking, festivals"],
