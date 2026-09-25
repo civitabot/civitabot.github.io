@@ -30,7 +30,7 @@
     <p><strong>About servers:</strong></p>
     <ul>
       <li>The server's Discord ID</li>
-      <li>Settings chosen by admins: language, IDs of the announcement / welcome / moderation log channels, IDs of the auto role, title roles and the support ticket staff role, the welcome message text, build mode, festival preference, and whether the server joined the world ranking</li>
+      <li>Settings chosen by admins: language, IDs of the announcement / welcome / moderation log channels, IDs of the auto role, title roles, the verification role and the support ticket staff role, the account age that needs staff approval during verification, the welcome message text, build mode, festival preference, and whether the server joined the world ranking</li>
       <li>The city's state: treasury, buildings, current project, founding date, Council votes (the vote message ID and options)</li>
     </ul>
     <p><strong>About members:</strong></p>
@@ -47,13 +47,14 @@
       <li><strong>Message content:</strong> Civita does not use Discord's "message content" permission. It only sees that a message was sent and counts it to earn Marble for the city.</li>
       <li><strong>Voice:</strong> Civita never listens to or records voice channels; it only checks who is in a voice channel and whether they have deafened themselves.</li>
       <li><strong>Usernames, nicknames and profile pictures</strong> are not stored. For the welcome card, the profile picture is fetched from Discord on the spot and not kept after the card is drawn.</li>
+      <li><strong>Verification:</strong> If verification is on, Civita reads when a new member's account was created and whether it has a profile picture from Discord at that moment. This is not stored; it is only posted to the server's moderation log channel so the staff can decide.</li>
       <li><strong>Server names</strong> are not stored. The name shown in the world ranking is read from Discord at that moment.</li>
     </ul>
 
     <h2>What we use it for</h2>
     <ul>
       <li>Running the city game (resource production, buildings, votes, titles, leaderboards, mini game rewards)</li>
-      <li>Running the server tools chosen by admins (welcome messages, auto role, moderation, support tickets)</li>
+      <li>Running the server tools chosen by admins (welcome messages, auto role, moderation, support tickets, member verification)</li>
       <li>Preventing abuse and fixing bugs</li>
     </ul>
 
