@@ -57,7 +57,7 @@ const EN = {
   q2: "Does it read our messages?",
   a2: "No. Civita never reads or stores the content of your messages; it only uses the fact that \"someone sent a message\" to earn resources for the city.",
   q3: "Which languages are supported?",
-  a3: "Turkish and English. Everyone sees Civita in their own Discord language; admins can pick a single language for the server if they prefer.",
+  a3: "Turkish, English, German and Spanish. Everyone sees Civita in their own Discord language; admins can pick a single language for the server if they prefer.",
   q4: "How do I get started?",
   a4: "Add Civita to your server, choose an announcement channel with /settings announcements and keep chatting. The first Council vote arrives within minutes.",
   q5: "Will it clash with other bots?",
