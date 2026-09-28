@@ -83,6 +83,7 @@ const COMMANDS = {
       ["/oyun bilgi", "Bilgi Yarışması"],
       ["/oyun refleks", "Refleks oyunu"],
       ["/oyun tarih-sırası", "Tarih Sırası (Kütüphane gerekir)"],
+      ["/davet", "Civita'yı kendi sunucuna ekle"],
     ]],
     ["Yöneticiler için", [
       ["/kurulum", "Bütün ayarları menülerle, adım adım yap"],
@@ -113,6 +114,7 @@ const COMMANDS = {
       ["/game trivia", "Trivia"],
       ["/game reflex", "Reflex game"],
       ["/game timeline", "Timeline (needs a Library)"],
+      ["/invite", "Add Civita to your own server"],
     ]],
     ["For admins", [
       ["/setup", "Set everything up step by step with menus"],
