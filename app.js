@@ -59,7 +59,7 @@ const EN = {
   q3: "Which languages are supported?",
   a3: "Turkish, English, German and Spanish. Everyone sees Civita in their own Discord language; admins can pick a single language for the server if they prefer.",
   q4: "How do I get started?",
-  a4: "Add Civita to your server, choose an announcement channel with /settings announcements and keep chatting. The first Council vote arrives within minutes.",
+  a4: "Add Civita to your server, run /setup to pick an announcement channel and keep chatting. The first Council vote arrives within minutes.",
   q5: "Will it clash with other bots?",
   a5: "No. Welcome messages are off by default, and using the moderation tools is up to you.",
   cta_title: "Ready to found your city?",
@@ -85,6 +85,7 @@ const COMMANDS = {
       ["/oyun tarih-sırası", "Tarih Sırası (Kütüphane gerekir)"],
     ]],
     ["Yöneticiler için", [
+      ["/kurulum", "Bütün ayarları menülerle, adım adım yap"],
       ["/ayarlar", "Dil, duyuru kanalı, inşa modu, unvan rolleri, hoş geldin, otomatik rol, mod-log, destek talepleri, doğrulama, dünya sıralaması, festivaller, gazete"],
       ["/inşa", "Sıradaki projeyi seç (yönetici modunda)"],
       ["/pazar", "Agora'da Mermer ↔ Zeytin takası"],
@@ -114,6 +115,7 @@ const COMMANDS = {
       ["/game timeline", "Timeline (needs a Library)"],
     ]],
     ["For admins", [
+      ["/setup", "Set everything up step by step with menus"],
       ["/settings", "Language, announcements, build mode, title roles, welcome, auto role, mod log, support tickets, verification, world ranking, festivals, gazette"],
       ["/build", "Choose the next project (admin mode)"],
       ["/market", "Trade Marble ↔ Olives in the Agora"],
