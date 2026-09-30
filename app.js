@@ -218,7 +218,7 @@ const COMMANDS = {
       ["/kurulum", "Bütün ayarları menülerle, adım adım yap"],
       ["/ayarlar", "Dil, duyuru kanalı, inşa modu, unvan rolleri, hoş geldin, otomatik rol, mod-log, destek talepleri, doğrulama, dünya sıralaması, festivaller, gazete"],
       ["/inşa", "Sıradaki projeyi seç (yönetici modunda)"],
-      ["/pazar", "Agora'da Mermer ↔ Zeytin takası"],
+      ["/pazar", "Mermer ↔ Zeytin takası (Agora kurulunca kur iyileşir)"],
       ["/kardeş-şehir davet · katıl · kervan · ayrıl", "Kardeş şehir kur, kervan gönder"],
     ]],
     ["Moderasyon", [
@@ -249,7 +249,7 @@ const COMMANDS = {
       ["/setup", "Set everything up step by step with menus"],
       ["/settings", "Language, announcements, build mode, title roles, welcome, auto role, mod log, support tickets, verification, world ranking, festivals, gazette"],
       ["/build", "Choose the next project (admin mode)"],
-      ["/market", "Trade Marble ↔ Olives in the Agora"],
+      ["/market", "Trade Marble ↔ Olives (better rates with an Agora)"],
       ["/sister-cities invite · join · caravan · leave", "Pair up with sister cities, send caravans"],
     ]],
     ["Moderation", [
@@ -280,7 +280,7 @@ const COMMANDS = {
       ["/einrichtung", "Alles Schritt für Schritt mit Menüs einrichten"],
       ["/einstellungen", "Sprache, Ankündigungen, Baumodus, Titelrollen, Willkommen, Auto-Rolle, Mod-Log, Support-Tickets, Verifizierung, Weltrangliste, Feste, Zeitung"],
       ["/bauen", "Das nächste Projekt wählen (Admin-Modus)"],
-      ["/markt", "Marmor ↔ Oliven auf der Agora tauschen"],
+      ["/markt", "Marmor ↔ Oliven tauschen (bessere Kurse mit einer Agora)"],
       ["/partnerstädte einladen · beitreten · karawane · verlassen", "Partnerstädte gründen, Karawanen schicken"],
     ]],
     ["Moderation", [
@@ -311,7 +311,7 @@ const COMMANDS = {
       ["/configurar", "Configúralo todo paso a paso con menús"],
       ["/ajustes", "Idioma, anuncios, modo de construcción, roles de títulos, bienvenida, rol automático, registro de moderación, tickets de soporte, verificación, ranking mundial, festivales, gaceta"],
       ["/construir", "Elige el próximo proyecto (modo admin)"],
-      ["/mercado", "Cambia Mármol ↔ Aceitunas en el Ágora"],
+      ["/mercado", "Cambia Mármol ↔ Aceitunas (mejor cambio con un Ágora)"],
       ["/ciudades-hermanas invitar · unirse · caravana · salir", "Hermanaos con otras ciudades, enviad caravanas"],
     ]],
     ["Moderación", [
