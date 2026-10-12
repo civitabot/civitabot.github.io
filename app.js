@@ -223,7 +223,7 @@ const COMMANDS = {
     ]],
     ["Yöneticiler için", [
       ["/kurulum", "Bütün ayarları menülerle, adım adım yap"],
-      ["/ayarlar", "Dil, duyuru kanalı, inşa modu, unvan rolleri, hoş geldin, otomatik rol, mod-log, destek talepleri, doğrulama, dünya sıralaması, festivaller, gazete"],
+      ["/ayarlar", "Dil, duyuru kanalı, inşa modu, unvan rolleri, hoş geldin, otomatik rol, mod-log, destek talepleri, doğrulama, dünya sıralaması, festivaller, gazete, olaylar, Şehir Meydanı paneli"],
       ["/inşa", "Sıradaki projeyi seç (yönetici modunda)"],
       ["/rol-menüsü ekle · çıkar · başlık · gönder", "Üyelerin kendi seçtiği roller (ör. ilgi alanları)"],
       ["/pazar", "Mermer ↔ Zeytin takası (Agora kurulunca kur iyileşir)"],
@@ -256,7 +256,7 @@ const COMMANDS = {
     ]],
     ["For admins", [
       ["/setup", "Set everything up step by step with menus"],
-      ["/settings", "Language, announcements, build mode, title roles, welcome, auto role, mod log, support tickets, verification, world ranking, festivals, gazette"],
+      ["/settings", "Language, announcements, build mode, title roles, welcome, auto role, mod log, support tickets, verification, world ranking, festivals, gazette, events, City Square panel"],
       ["/build", "Choose the next project (admin mode)"],
       ["/role-menu add · remove · title · post", "Roles members pick for themselves (e.g. interests)"],
       ["/market", "Trade Marble ↔ Olives (better rates with an Agora)"],
@@ -289,7 +289,7 @@ const COMMANDS = {
     ]],
     ["Für Admins", [
       ["/einrichtung", "Alles Schritt für Schritt mit Menüs einrichten"],
-      ["/einstellungen", "Sprache, Ankündigungen, Baumodus, Titelrollen, Willkommen, Auto-Rolle, Mod-Log, Support-Tickets, Verifizierung, Weltrangliste, Feste, Zeitung"],
+      ["/einstellungen", "Sprache, Ankündigungen, Baumodus, Titelrollen, Willkommen, Auto-Rolle, Mod-Log, Support-Tickets, Verifizierung, Weltrangliste, Feste, Zeitung, Ereignisse, Stadtplatz-Panel"],
       ["/bauen", "Das nächste Projekt wählen (Admin-Modus)"],
       ["/rollenmenü hinzufügen · entfernen · titel · senden", "Rollen, die Mitglieder selbst wählen (z. B. Interessen)"],
       ["/markt", "Marmor ↔ Oliven tauschen (bessere Kurse mit einer Agora)"],
@@ -322,7 +322,7 @@ const COMMANDS = {
     ]],
     ["Para admins", [
       ["/configurar", "Configúralo todo paso a paso con menús"],
-      ["/ajustes", "Idioma, anuncios, modo de construcción, roles de títulos, bienvenida, rol automático, registro de moderación, tickets de soporte, verificación, ranking mundial, festivales, gaceta"],
+      ["/ajustes", "Idioma, anuncios, modo de construcción, roles de títulos, bienvenida, rol automático, registro de moderación, tickets de soporte, verificación, ranking mundial, festivales, gaceta, eventos, panel de la plaza"],
       ["/construir", "Elige el próximo proyecto (modo admin)"],
       ["/menú-roles añadir · quitar · título · publicar", "Roles que eligen los miembros (p. ej. intereses)"],
       ["/mercado", "Cambia Mármol ↔ Aceitunas (mejor cambio con un Ágora)"],
