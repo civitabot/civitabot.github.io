@@ -391,8 +391,9 @@ function renderCommands(lang) {
 
 function setLanguage(lang) {
   const text = TEXTS[lang];
-  document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = text[el.dataset.i18n]));
-  document.querySelectorAll("[data-i18n-alt]").forEach((el) => (el.alt = text[el.dataset.i18nAlt]));
+  // Bir dilde metin eksikse Türkçesi kalır (boş görünmesin).
+  document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = text[el.dataset.i18n] ?? TR[el.dataset.i18n]));
+  document.querySelectorAll("[data-i18n-alt]").forEach((el) => (el.alt = text[el.dataset.i18nAlt] ?? TR[el.dataset.i18nAlt]));
   document.documentElement.lang = lang;
   document.getElementById("lang-select").value = lang;
   // Hukuki sayfalar Türkçe ve İngilizce; diğer diller İngilizcesine gider.
