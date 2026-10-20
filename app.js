@@ -220,6 +220,7 @@ const COMMANDS = {
       ["/oyun refleks", "Refleks oyunu"],
       ["/oyun tarih-sırası", "Tarih Sırası (Kütüphane gerekir)"],
       ["/davet", "Civita'yı kendi sunucuna ekle"],
+      ["/oy-ver", "Top.gg'de oy ver, şehrine Sikke kazandır"],
     ]],
     ["Yöneticiler için", [
       ["/kurulum", "Bütün ayarları menülerle, adım adım yap"],
@@ -253,6 +254,7 @@ const COMMANDS = {
       ["/game reflex", "Reflex game"],
       ["/game timeline", "Timeline (needs a Library)"],
       ["/invite", "Add Civita to your own server"],
+      ["/vote", "Vote on Top.gg and earn Coins for your city"],
     ]],
     ["For admins", [
       ["/setup", "Set everything up step by step with menus"],
@@ -286,6 +288,7 @@ const COMMANDS = {
       ["/spiel reflex", "Reaktionsspiel"],
       ["/spiel zeitleiste", "Zeitleiste (braucht eine Bibliothek)"],
       ["/einladen", "Civita zu deinem eigenen Server hinzufügen"],
+      ["/abstimmen", "Auf Top.gg abstimmen und Münzen für deine Stadt verdienen"],
     ]],
     ["Für Admins", [
       ["/einrichtung", "Alles Schritt für Schritt mit Menüs einrichten"],
@@ -319,6 +322,7 @@ const COMMANDS = {
       ["/juego reflejos", "Juego de reflejos"],
       ["/juego cronología", "Cronología (requiere una Biblioteca)"],
       ["/invitar", "Añade Civita a tu propio servidor"],
+      ["/votar", "Vota en Top.gg y gana Monedas para tu ciudad"],
     ]],
     ["Para admins", [
       ["/configurar", "Configúralo todo paso a paso con menús"],
