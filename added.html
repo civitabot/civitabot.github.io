@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <title>Civita</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <!-- Civita'yı ekleyen kişiyi Discord buraya yönlendirir (davet linkindeki redirect_uri).
+       Adres çubuğundaki tek kullanımlık kod hemen silinir; hiçbir yere gönderilmez, saklanmaz. -->
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" lang="en" href="index.html">🏛️ Civita</a>
+      <select class="lang" id="lang-select" aria-label="Dil / Language / Sprache / Idioma">
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1 id="title"></h1>
+      <p class="tagline" id="lead"></p>
+      <div class="actions" id="actions"></div>
+    </div>
+  </header>
+
+  <section class="alt" id="steps-section">
+    <div class="wrap">
+      <div class="steps" id="steps"></div>
+      <p class="section-lead" id="help" style="margin-top: 28px"></p>
+    </div>
+  </section>
+
+  <script>
+    const SUPPORT_URL = "https://discord.gg/n2ZxqyrqaU";
+    const VOTE_URL = "https://top.gg/bot/1135134099061878795/vote";
+    const INVITE_URL =
+      "https://discord.com/oauth2/authorize?client_id=1135134099061878795&permissions=2253260371127318" +
+      "&integration_type=0&scope=bot+applications.commands&response_type=code" +
+      "&redirect_uri=" + encodeURIComponent("https://civitabot.github.io/added.html");
+
+    const TEXTS = {
+      tr: {
+        added: "🎉 Civita sunucuna eklendi!",
+        start: "Civita'yla başlarken",
+        lead: "Şehrin kuruldu. Birkaç dakika içinde ilk Meclis oylaması gelecek. Başlamak için yapman gerekenler:",
+        steps: [
+          ["💬", "Sohbete devam edin", "Mesajlar 🪨 Mermer, sesli kanallar 🫒 Zeytin getirir. Civita duyurular için uygun bir kanalı kendisi seçer."],
+          ["📢", "Şehre kendi kanalını açın", "Civita'nın karşılama mesajındaki <b>Civita kanalı oluştur</b> düğmesine basın. Kanal, Şehir Meydanı paneliyle birlikte gelir."],
+          ["⚙️", "Ayarları yapın", "<code>/kurulum</code> her ayar için menüleri olan bir panel açar: dil, duyuru kanalı, hoş geldin mesajı, festivaller…"],
+          ["🏛️", "Komut yazmadan oynatın", "<code>/ayarlar meydan</code> kanala düğmeli bir panel sabitler. Üyeler komut yazmadan şehri, profillerini ve günün emirlerini görür."],
+        ],
+        help: "Bütün komutlar için Discord'da <code>/yardım</code> yazın.",
+        open: "Sunucuna dön", support: "Destek sunucusu", vote: "🗳️ Top.gg'de oy ver",
+        failed: "Civita eklenmedi", failed_lead: "Ekleme iptal edildi ya da tamamlanamadı. İstersen tekrar deneyebilirsin.", retry: "Tekrar dene",
+      },
+      en: {
+        added: "🎉 Civita was added to your server!",
+        start: "Getting started with Civita",
+        lead: "Your city has been founded. The first Council vote arrives within minutes. Here's how to get going:",
+        steps: [
+          ["💬", "Keep chatting", "Messages bring 🪨 Marble and voice channels bring 🫒 Olives. Civita picks a suitable announcement channel by itself."],
+          ["📢", "Give the city its own channel", "Press <b>Create a Civita channel</b> in Civita's welcome message. The channel comes with a City Square panel."],
+          ["⚙️", "Adjust the settings", "<code>/setup</code> opens a panel with menus for every setting: language, announcement channel, welcome message, festivals…"],
+          ["🏛️", "Play without commands", "<code>/settings square</code> pins a button panel in a channel. Members see the city, their profile and today's orders without typing commands."],
+        ],
+        help: "Type <code>/help</code> in Discord for every command.",
+        open: "Back to your server", support: "Support server", vote: "🗳️ Vote on Top.gg",
+        failed: "Civita wasn't added", failed_lead: "Adding Civita was cancelled or didn't finish. You can try again if you like.", retry: "Try again",
+      },
+      de: {
+        added: "🎉 Civita wurde deinem Server hinzugefügt!",
+        start: "Erste Schritte mit Civita",
+        lead: "Eure Stadt ist gegründet. Die erste Ratsabstimmung kommt in wenigen Minuten. So geht's los:",
+        steps: [
+          ["💬", "Schreibt einfach weiter", "Nachrichten bringen 🪨 Marmor, Sprachkanäle bringen 🫒 Oliven. Civita sucht sich selbst einen passenden Ankündigungskanal."],
+          ["📢", "Gebt der Stadt einen eigenen Kanal", "Drücke in Civitas Willkommensnachricht auf <b>Civita-Kanal erstellen</b>. Der Kanal kommt mit einem Stadtplatz-Panel."],
+          ["⚙️", "Passt die Einstellungen an", "<code>/einrichtung</code> öffnet ein Panel mit Menüs für jede Einstellung: Sprache, Ankündigungskanal, Willkommensnachricht, Feste …"],
+          ["🏛️", "Spielen ohne Befehle", "<code>/einstellungen platz</code> heftet ein Panel mit Knöpfen an. Mitglieder sehen Stadt, Profil und Ratsaufträge, ohne Befehle zu tippen."],
+        ],
+        help: "Mit <code>/hilfe</code> siehst du in Discord alle Befehle.",
+        open: "Zurück zu deinem Server", support: "Support-Server", vote: "🗳️ Auf Top.gg abstimmen",
+        failed: "Civita wurde nicht hinzugefügt", failed_lead: "Das Hinzufügen wurde abgebrochen oder nicht abgeschlossen. Du kannst es gern noch einmal versuchen.", retry: "Noch einmal versuchen",
+      },
+      es: {
+        added: "🎉 ¡Civita se ha añadido a tu servidor!",
+        start: "Primeros pasos con Civita",
+        lead: "Vuestra ciudad ya está fundada. La primera votación del Consejo llega en pocos minutos. Así se empieza:",
+        steps: [
+          ["💬", "Seguid chateando", "Los mensajes traen 🪨 Mármol y los canales de voz 🫒 Aceitunas. Civita elige solo un canal de anuncios adecuado."],
+          ["📢", "Dadle a la ciudad su propio canal", "Pulsa <b>Crear canal de Civita</b> en el mensaje de bienvenida de Civita. El canal viene con un panel de la Plaza de la ciudad."],
+          ["⚙️", "Ajustad la configuración", "<code>/configurar</code> abre un panel con menús para cada ajuste: idioma, canal de anuncios, mensaje de bienvenida, festivales…"],
+          ["🏛️", "Jugad sin comandos", "<code>/ajustes plaza</code> fija un panel con botones. Los miembros ven la ciudad, su perfil y las órdenes del día sin escribir comandos."],
+        ],
+        help: "Escribe <code>/ayuda</code> en Discord para ver todos los comandos.",
+        open: "Volver a tu servidor", support: "Servidor de soporte", vote: "🗳️ Votar en Top.gg",
+        failed: "Civita no se ha añadido", failed_lead: "Se canceló o no se completó. Puedes volver a intentarlo si quieres.", retry: "Intentar de nuevo",
+      },
+    };
+
+    // Discord'un eklediği bilgiler okunur, sonra adres çubuğundan silinir (kod paylaşılmasın, kaydedilmesin).
+    const params = new URLSearchParams(location.search);
+    const guildId = /^\d{15,22}$/.test(params.get("guild_id") || "") ? params.get("guild_id") : null;
+    const failed = params.has("error");
+    if (location.search) history.replaceState(null, "", location.pathname);
+
+    function initialLanguage() {
+      try {
+        const saved = localStorage.getItem("civita-lang");
+        if (TEXTS[saved]) return saved;
+      } catch (error) {
+        // Tarayıcı kayda izin vermiyorsa tarayıcının diline bakılır.
+      }
+      for (const lang of navigator.languages || [navigator.language || "en"]) {
+        const short = String(lang).slice(0, 2).toLowerCase();
+        if (TEXTS[short]) return short;
+      }
+      return "en";
+    }
+
+    function button(label, href, primary) {
+      const link = document.createElement("a");
+      link.className = "btn " + (primary ? "btn-primary" : "btn-ghost");
+      link.href = href;
+      link.rel = "noopener";
+      link.textContent = label;
+      return link;
+    }
+
+    function render(lang) {
+      const text = TEXTS[lang];
+      document.documentElement.lang = lang;
+      document.getElementById("lang-select").value = lang;
+      document.getElementById("title").textContent = failed ? text.failed : guildId ? text.added : text.start;
+      document.title = (failed ? text.failed : guildId ? text.added : text.start).replace("🎉 ", "") + " — Civita";
+      document.getElementById("lead").textContent = failed ? text.failed_lead : text.lead;
+
+      const actions = document.getElementById("actions");
+      actions.replaceChildren();
+      if (failed) {
+        actions.append(button(text.retry, INVITE_URL, true), button(text.support, SUPPORT_URL, false));
+      } else {
+        const server = guildId ? "https://discord.com/channels/" + guildId : "https://discord.com/app";
+        actions.append(button(text.open, server, true), button(text.support, SUPPORT_URL, false), button(text.vote, VOTE_URL, false));
+      }
+
+      document.getElementById("steps-section").hidden = failed;
+      const steps = document.getElementById("steps");
+      steps.replaceChildren();
+      for (const [icon, title, body] of text.steps) {
+        const step = document.createElement("div");
+        step.className = "step";
+        const iconEl = document.createElement("div");
+        iconEl.className = "icon";
+        iconEl.textContent = icon;
+        const heading = document.createElement("h3");
+        heading.textContent = title;
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = body; // yalnızca yukarıdaki sabit metinler (kullanıcıdan gelen bir şey yok)
+        step.append(iconEl, heading, paragraph);
+        steps.append(step);
+      }
+      document.getElementById("help").innerHTML = text.help;
+    }
+
+    document.getElementById("lang-select").addEventListener("change", (event) => {
+      render(event.target.value);
+      try {
+        localStorage.setItem("civita-lang", event.target.value);
+      } catch (error) {
+        // Kaydedilemezse seçim yalnızca bu sayfada geçerli olur.
+      }
+    });
+    render(initialLanguage());
+  </script>
+</body>
+</html>
