@@ -2,7 +2,7 @@
 // Sayfanın HTML'i Türkçe yazılır; diğer dillerin metinleri aşağıdaki sözlüklerden gelir.
 
 // Botun içindeki link ile aynı olmalı (tests/test_invite.py denetler). Ekleyen kişi added.html'e yönlenir.
-const INVITE_URL = "https://discord.com/oauth2/authorize?client_id=1135134099061878795&permissions=2534735348886550&integration_type=0&scope=bot+applications.commands&response_type=code&redirect_uri=https%3A%2F%2Fcivitabot.github.io%2Fadded.html";
+const INVITE_URL = "https://discord.com/oauth2/authorize?client_id=1135134099061878795&permissions=2534735348886550&integration_type=0&scope=bot+applications.commands&response_type=code&redirect_uri=https%3A%2F%2Fcivita.kenzai.dev%2Fadded.html";
 const SUPPORT_URL = "https://discord.gg/n2ZxqyrqaU"; // destek sunucusu (boşken düğme gizlenir)
 const LANGUAGES = ["tr", "en", "de", "es"];
 
