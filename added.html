@@ -42,6 +42,7 @@
   <script>
     const SUPPORT_URL = "https://discord.gg/n2ZxqyrqaU";
     const VOTE_URL = "https://top.gg/bot/1135134099061878795/vote";
+    const PANEL_URL = "https://civita-panel.kenzai.dev";
     const INVITE_URL = "https://discord.com/oauth2/authorize?client_id=1135134099061878795&permissions=2534735348886550&integration_type=0&scope=bot+applications.commands&response_type=code&redirect_uri=https%3A%2F%2Fcivita.kenzai.dev%2Fadded.html";
 
     const TEXTS = {
@@ -56,7 +57,7 @@
           ["🏛️", "Komut yazmadan oynatın", "<code>/ayarlar meydan</code> kanala düğmeli bir panel sabitler. Üyeler komut yazmadan şehri, profillerini ve günün emirlerini görür."],
         ],
         help: "Bütün komutlar için Discord'da <code>/yardım</code> yazın.",
-        open: "Sunucuna dön", support: "Destek sunucusu", vote: "🗳️ Top.gg'de oy ver",
+        open: "Sunucuna dön", panel: "🖥️ Paneli aç", support: "Destek sunucusu", vote: "🗳️ Top.gg'de oy ver",
         failed: "Civita eklenmedi", failed_lead: "Ekleme iptal edildi ya da tamamlanamadı. İstersen tekrar deneyebilirsin.", retry: "Tekrar dene",
       },
       en: {
@@ -70,7 +71,7 @@
           ["🏛️", "Play without commands", "<code>/settings square</code> pins a button panel in a channel. Members see the city, their profile and today's orders without typing commands."],
         ],
         help: "Type <code>/help</code> in Discord for every command.",
-        open: "Back to your server", support: "Support server", vote: "🗳️ Vote on Top.gg",
+        open: "Back to your server", panel: "🖥️ Open the dashboard", support: "Support server", vote: "🗳️ Vote on Top.gg",
         failed: "Civita wasn't added", failed_lead: "Adding Civita was cancelled or didn't finish. You can try again if you like.", retry: "Try again",
       },
       de: {
@@ -84,7 +85,7 @@
           ["🏛️", "Spielen ohne Befehle", "<code>/einstellungen platz</code> heftet ein Panel mit Knöpfen an. Mitglieder sehen Stadt, Profil und Ratsaufträge, ohne Befehle zu tippen."],
         ],
         help: "Mit <code>/hilfe</code> siehst du in Discord alle Befehle.",
-        open: "Zurück zu deinem Server", support: "Support-Server", vote: "🗳️ Auf Top.gg abstimmen",
+        open: "Zurück zu deinem Server", panel: "🖥️ Dashboard öffnen", support: "Support-Server", vote: "🗳️ Auf Top.gg abstimmen",
         failed: "Civita wurde nicht hinzugefügt", failed_lead: "Das Hinzufügen wurde abgebrochen oder nicht abgeschlossen. Du kannst es gern noch einmal versuchen.", retry: "Noch einmal versuchen",
       },
       es: {
@@ -98,7 +99,7 @@
           ["🏛️", "Jugad sin comandos", "<code>/ajustes plaza</code> fija un panel con botones. Los miembros ven la ciudad, su perfil y las órdenes del día sin escribir comandos."],
         ],
         help: "Escribe <code>/ayuda</code> en Discord para ver todos los comandos.",
-        open: "Volver a tu servidor", support: "Servidor de soporte", vote: "🗳️ Votar en Top.gg",
+        open: "Volver a tu servidor", panel: "🖥️ Abrir el panel", support: "Servidor de soporte", vote: "🗳️ Votar en Top.gg",
         failed: "Civita no se ha añadido", failed_lead: "Se canceló o no se completó. Puedes volver a intentarlo si quieres.", retry: "Intentar de nuevo",
       },
     };
@@ -146,7 +147,9 @@
         actions.append(button(text.retry, INVITE_URL, true), button(text.support, SUPPORT_URL, false));
       } else {
         const server = guildId ? "https://discord.com/channels/" + guildId : "https://discord.com/app";
-        actions.append(button(text.open, server, true), button(text.support, SUPPORT_URL, false), button(text.vote, VOTE_URL, false));
+        const panel = PANEL_URL + (guildId ? "/g/" + guildId : "");
+        actions.append(button(text.open, server, true), button(text.panel, panel, false),
+                       button(text.support, SUPPORT_URL, false), button(text.vote, VOTE_URL, false));
       }
 
       document.getElementById("steps-section").hidden = failed;
