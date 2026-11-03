@@ -67,7 +67,7 @@ const EN = {
   commands_lead: "Commands appear in each member's own Discord language.",
   faq_title: "Frequently asked questions",
   q1: "Is it free?",
-  a1: "Yes. All of Civita's features are free.",
+  a1: "Yes. The city game, the server tools and the web dashboard are free and will stay free. Optional Premium only adds cosmetics and convenience (city themes, showcase decorations, a custom bot look, one-year statistics); it gives no gameplay advantage.",
   q2: "Does it read our messages?",
   a2: "No. Civita never reads or stores the content of your messages; it only uses the fact that \"someone sent a message\" to earn resources for the city.",
   q3: "Which languages are supported?",
@@ -144,7 +144,7 @@ const DE = {
   commands_lead: "Die Befehle erscheinen in der Discord-Sprache jedes Mitglieds.",
   faq_title: "Häufige Fragen",
   q1: "Ist es kostenlos?",
-  a1: "Ja. Alle Funktionen von Civita sind kostenlos.",
+  a1: "Ja. Das Stadtspiel, die Server-Werkzeuge und das Web-Dashboard sind kostenlos und bleiben es. Das optionale Premium bringt nur Optik und Komfort (Stadtthemen, Schmuck für die Schaufensterseite, eigenes Bot-Aussehen, Statistiken über ein Jahr) und keinen Spielvorteil.",
   q2: "Liest es unsere Nachrichten?",
   a2: "Nein. Civita liest und speichert den Inhalt eurer Nachrichten nie; es nutzt nur die Tatsache, dass „jemand eine Nachricht geschrieben hat“, um Ressourcen für die Stadt zu verdienen.",
   q3: "Welche Sprachen werden unterstützt?",
@@ -221,7 +221,7 @@ const ES = {
   commands_lead: "Los comandos aparecen en el idioma de Discord de cada miembro.",
   faq_title: "Preguntas frecuentes",
   q1: "¿Es gratis?",
-  a1: "Sí. Todas las funciones de Civita son gratuitas.",
+  a1: "Sí. El juego de la ciudad, las herramientas de servidor y el panel web son gratis y lo seguirán siendo. Premium, opcional, solo añade estética y comodidad (temas de ciudad, decoración del escaparate, aspecto propio del bot, estadísticas de un año); no da ventaja en el juego.",
   q2: "¿Lee nuestros mensajes?",
   a2: "No. Civita nunca lee ni guarda el contenido de vuestros mensajes; solo usa el hecho de que «alguien escribió un mensaje» para conseguir recursos para la ciudad.",
   q3: "¿Qué idiomas admite?",
@@ -420,6 +420,7 @@ function setLanguage(lang) {
   // Hukuki sayfalar Türkçe ve İngilizce; diğer diller İngilizcesine gider.
   document.getElementById("privacy-link").href = lang === "tr" ? "gizlilik.html" : "privacy.html";
   document.getElementById("terms-link").href = lang === "tr" ? "kosullar.html" : "terms.html";
+  document.querySelectorAll(".premium-link").forEach((el) => (el.href = lang === "tr" ? "premium-tr.html" : "premium.html"));
   renderCommands(lang);
   try {
     localStorage.setItem("civita-lang", lang);
