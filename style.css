@@ -170,6 +170,8 @@ section.alt { background: var(--bg-alt); }
 .step .icon, .feature .icon { font-size: 2rem; line-height: 1; margin-bottom: 12px; }
 .step h3, .feature h3 { font-size: 1.15rem; }
 .step p, .feature p { margin: 0; color: var(--ink-soft); }
+.feature-premium { border-color: var(--gold, #d9ab4f); }
+.feature .more { display: inline-block; margin-top: 10px; font-weight: 600; text-decoration: none; }
 
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
 
