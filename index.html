@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://civita.kenzai.dev/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
   <nav class="nav">
@@ -33,16 +33,25 @@
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero hero-split">
     <div class="wrap">
-      <h1 lang="en">Civita</h1>
-      <p class="tagline" data-i18n="tagline">Discord sunucunu, üyelerin birlikte inşa ettiği yaşayan bir antik kente dönüştür.</p>
-      <div class="actions">
-        <a class="btn btn-primary invite" href="#" data-i18n="add">Sunucuna Ekle</a>
-        <a class="btn btn-ghost support" href="#" data-i18n="support">Destek Sunucusu</a>
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="hero_eyebrow">Discord için şehir kurma botu</p>
+        <h1 lang="en">Civita</h1>
+        <p class="tagline" data-i18n="tagline">Discord sunucunu, üyelerin birlikte inşa ettiği yaşayan bir antik kente dönüştür.</p>
+        <div class="actions">
+          <a class="btn btn-primary invite" href="#" data-i18n="add">Sunucuna Ekle</a>
+          <a class="btn btn-ghost" href="https://civita-panel.kenzai.dev" data-i18n="hero_panel">Paneli aç</a>
+        </div>
+        <ul class="chips">
+          <li data-i18n="chip_free">Ücretsiz</li>
+          <li data-i18n="chip_private">Mesajları okumaz</li>
+          <li data-i18n="chip_langs">4 dil</li>
+          <li data-i18n="chip_panel">Web paneli</li>
+        </ul>
       </div>
-      <figure>
-        <img class="shot" src="img/hero.png" width="1200" height="640" data-i18n-alt="hero_alt" alt="Tapınağı, limanı ve deniz feneri, agorası, amfitiyatrosu, hamamı, kayalık üstündeki kütüphanesi, su kemeri ve zafer takı olan, bayraklarla süslenmiş bir Civita şehri">
+      <figure class="hero-media">
+        <img class="shot" src="img/city-live.gif" width="960" height="512" data-i18n-alt="hero_alt" alt="Tapınağı, limanı ve deniz feneri, agorası, amfitiyatrosu, hamamı, kayalık üstündeki kütüphanesi, su kemeri ve zafer takı olan, bayraklarla süslenmiş bir Civita şehri">
         <figcaption class="caption" data-i18n="hero_caption">Gerçek bir Civita şehri: her bina, sunucu üyelerinin emeğiyle yükseldi.</figcaption>
       </figure>
     </div>
@@ -53,9 +62,9 @@
       <h2 class="section-title" data-i18n="how_title">Nasıl çalışır?</h2>
       <p class="section-lead" data-i18n="how_lead">Kimse ek bir şey yapmak zorunda değil: sunucunuz ne kadar canlıysa şehriniz o kadar hızlı büyür.</p>
       <div class="steps">
-        <div class="step"><div class="icon">💬</div><h3 data-i18n="step1_title">Sohbet edin, oynayın</h3><p data-i18n="step1_text">Mesajlar 🪨 Mermer, sesli kanallar 🫒 Zeytin, mini oyunlar 🪙 Sikke kazandırır. Hepsi şehrin ortak hazinesine gider.</p></div>
-        <div class="step"><div class="icon">🗳️</div><h3 data-i18n="step2_title">Meclis karar versin</h3><p data-i18n="step2_text">Sıradaki binayı üyeler butonlarla oylar. Hazine dolunca inşaat kendiliğinden tamamlanır.</p></div>
-        <div class="step"><div class="icon">🏛️</div><h3 data-i18n="step3_title">Şehriniz büyüsün</h3><p data-i18n="step3_text">Her bina sunucuya yeni bir güç kazandırır ve şehrin resminde görünür. Her şehir birbirinden farklıdır.</p></div>
+        <div class="step"><div class="step-no">1</div><div class="icon">💬</div><h3 data-i18n="step1_title">Sohbet edin, oynayın</h3><p data-i18n="step1_text">Mesajlar 🪨 Mermer, sesli kanallar 🫒 Zeytin, mini oyunlar 🪙 Sikke kazandırır. Hepsi şehrin ortak hazinesine gider.</p></div>
+        <div class="step"><div class="step-no">2</div><div class="icon">🗳️</div><h3 data-i18n="step2_title">Meclis karar versin</h3><p data-i18n="step2_text">Sıradaki binayı üyeler butonlarla oylar. Hazine dolunca inşaat kendiliğinden tamamlanır.</p></div>
+        <div class="step"><div class="step-no">3</div><div class="icon">🏛️</div><h3 data-i18n="step3_title">Şehriniz büyüsün</h3><p data-i18n="step3_text">Her bina sunucuya yeni bir güç kazandırır ve şehrin resminde görünür. Her şehir birbirinden farklıdır.</p></div>
       </div>
     </div>
   </section>
@@ -64,7 +73,81 @@
     <div class="wrap">
       <h2 class="section-title" data-i18n="features_title">Neler var?</h2>
       <p class="section-lead" data-i18n="features_lead">Bir şehir oyunu, eğlenceli mini oyunlar ve ihtiyacınız olan sunucu araçları, tek botta.</p>
-      <div class="features">
+
+      <div class="showcase">
+        <div>
+          <p class="eyebrow" data-i18n="sp1_eyebrow">Şehir</p>
+          <h3 data-i18n="sp1_title">Her sunucunun kendi şehri</h3>
+          <p data-i18n="sp1_text">On bir bina, üç seviye ve her biri sunucuya yeni bir güç. Meclis'te üyeler sıradaki inşaatı oylar; şehir, gökyüzü saatine, festivallere ve canlılığına göre her seferinde yeniden çizilir. Hiçbir şehir diğerine benzemez.</p>
+          <ul class="ticks">
+            <li data-i18n="sp1_a">Meclis oylamaları ve şehir olayları</li>
+            <li data-i18n="sp1_b">Unvanlar, Discord rolleri ve sıralamalar</li>
+            <li data-i18n="sp1_c">Haftalık şehir gazetesi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="showcase reverse">
+        <figure><img class="shot" src="img/home-wonder.png" width="1200" height="640" loading="lazy" data-i18n-alt="sp2_alt" alt="Yapımı süren teraslı bahçeler ve limana yanaşmış kardeş şehir gemileri olan bir şehir"></figure>
+        <div>
+          <p class="eyebrow" data-i18n="sp2_eyebrow">Ortak hedefler</p>
+          <h3 data-i18n="sp2_title">Dünya Harikası ve seferler</h3>
+          <p data-i18n="sp2_text">Şehir büyüyünce vatandaşlar bir Dünya Harikası seçer ve haftalarca birlikte inşa eder. Paros'a, Efes'e, Truva'ya seferler gönderilir; mürettebat yoldaki korsanlara ve fırtınalara oyla karar verir, ganimet ve antik eserlerle döner.</p>
+          <ul class="ticks">
+            <li data-i18n="sp2_a">Üç harika, beş aşama, kalıcı etki</li>
+            <li data-i18n="sp2_b">Kardeş şehirler ve kervanlar</li>
+            <li data-i18n="sp2_c">Yeni sunuculara kuruluş rehberi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="showcase">
+        <div class="tiles" aria-hidden="true"><span>🧠</span><span>⚡</span><span>🦁</span><span>🔦</span><span>📜</span><span>🏟️</span></div>
+        <div>
+          <p class="eyebrow" data-i18n="sp3_eyebrow">Oyunlar</p>
+          <h3 data-i18n="sp3_title">Mini oyunlar ve Büyük Oyunlar</h3>
+          <p data-i18n="sp3_text">Bilgi Yarışması, Refleks, Sfenks'in Bilmecesi, Hazine Mağarası ve Tarih Sırası: her oyun şehre Sikke kazandırır. Her ayın ilk haftası bütün şehirler Büyük Oyunlar'da yarışır; günde en çok sekiz oyun sayıldığı için kalabalık değil, her gün oynayan kazanır.</p>
+          <ul class="ticks">
+            <li data-i18n="sp3_a">200'den fazla soru, dört dilde</li>
+            <li data-i18n="sp3_b">Dünyada madalyalar, kardeş şehirler arasında defne tacı</li>
+            <li data-i18n="sp3_c">Komutsuz başlatmak için Şehir Meydanı</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="showcase reverse">
+        <div class="tiles" aria-hidden="true"><span>🏺</span><span>🦉</span><span>⚙️</span><span>🧭</span><span>🎶</span><span>🏅</span></div>
+        <div>
+          <p class="eyebrow" data-i18n="sp4_eyebrow">Herkese bir rol</p>
+          <h3 data-i18n="sp4_title">Müze, meslekler ve başarımlar</h3>
+          <p data-i18n="sp4_text">Sohbet ederken antik eserler bulun, müzeye bağışlayın ve temalı koleksiyonları tamamlayıp sergiler açın. Taş ustası, kâşif ya da ozan olun: her meslek şehre kendi yoluyla katkı yapar. Rozetler ve şehir başarımları her emeği görünür kılar.</p>
+          <ul class="ticks">
+            <li data-i18n="sp4_a">32 eser, 8 koleksiyon</li>
+            <li data-i18n="sp4_b">5 meslek, hepsi ücretsiz</li>
+            <li data-i18n="sp4_c">Günlük Meclis Emirleri</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="showcase">
+        <div>
+          <p class="eyebrow" data-i18n="sp5_eyebrow">Sunucu araçları</p>
+          <h3 data-i18n="sp5_title">Topluluğunu yönetmek için her şey</h3>
+          <p data-i18n="sp5_text">Hoş geldin kartı, otomatik rol, üye doğrulama, uyarı ve moderasyon kaydı, gizli alt başlıkta destek talepleri ve rol menüleri. Yeni bir sunucu mu açtınız? Kurulum sihirbazı kanalları, rolleri ve izinleri birkaç tıkla hazırlar. Hepsini web panelinden yönetin.</p>
+          <ul class="ticks">
+            <li data-i18n="sp5_a">Discord izinlerine göre çalışır</li>
+            <li data-i18n="sp5_b">Canlı önizlemeli mesaj düzenleyici</li>
+            <li data-i18n="sp5_c">Her ayar değişikliği kayıt altında</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="all">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="all_title">Bütün özellikler</h2>
+      <div class="features compact">
         <div class="feature"><div class="icon">🖼️</div><h3 data-i18n="f_picture_title">Çizilen şehir</h3><p data-i18n="f_picture_text">/şehir yazın, şehrinizin resmini görün. Gökyüzü saatine göre değişir: şafak, gündüz, gün batımı, yıldızlı gece.</p></div>
         <div class="feature"><div class="icon">🎭</div><h3 data-i18n="f_games_title">Mini oyunlar</h3><p data-i18n="f_games_text">200'ü aşkın sorulu Bilgi Yarışması, hızlı parmaklar için Refleks, ipucundan önce bilenin kazandığı Sfenks'in Bilmecesi, şansını zorladığın Hazine Mağarası ve Kütüphane'yle açılan Tarih Sırası. Amfitiyatro kurulunca kazananlar şehre Sikke kazandırır.</p></div>
         <div class="feature"><div class="icon">❤️</div><h3 data-i18n="f_vitality_title">Canlılık</h3><p data-i18n="f_vitality_text">Her gün katkı veren kişi sayısı şehrin canlılığını belirler. Canlı şehirler daha hızlı üretir; sokakları kalabalıklaşır.</p></div>
@@ -89,15 +172,29 @@
     </div>
   </section>
 
+  <section id="trust">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="trust_title">Güvenli ve adil</h2>
+      <p class="section-lead" data-i18n="trust_lead">Civita, topluluğunuzun güvenini ilk günden ciddiye alır.</p>
+      <div class="trust">
+        <div class="trust-item"><div class="icon">🔒</div><h3 data-i18n="t1_title">Mesajlarınızı okumaz</h3><p data-i18n="t1_text">Mesaj içeriği izni kullanılmaz; yalnızca bir mesajın yazıldığı sayılır. Ses dinlenmez, kaydedilmez.</p></div>
+        <div class="trust-item"><div class="icon">🛡️</div><h3 data-i18n="t2_title">Discord izinlerine saygı</h3><p data-i18n="t2_text">Her yönetim işi Discord'daki yetkinize göre çalışır; panel her değişiklikten önce izninizi yeniden kontrol eder.</p></div>
+        <div class="trust-item"><div class="icon">🗂️</div><h3 data-i18n="t3_title">Verileriniz sizin</h3><p data-i18n="t3_text">Veriler satılmaz, reklamda kullanılmaz; istediğiniz zaman silinmesini isteyebilirsiniz.</p></div>
+        <div class="trust-item"><div class="icon">⚖️</div><h3 data-i18n="t4_title">Parayla üstünlük yok</h3><p data-i18n="t4_text">Premium yalnızca görünüm ve yönetim araçları ekler; üretim, ödüller ve sıralamalar herkes için aynıdır.</p></div>
+      </div>
+      <p class="center"><a class="more" href="/privacy/" data-i18n="trust_more">Gizlilik politikasını oku →</a></p>
+    </div>
+  </section>
+
   <section class="alt">
     <div class="wrap">
       <h2 class="section-title" data-i18n="gallery_title">Şehirden kareler</h2>
       <p class="section-lead" data-i18n="gallery_lead">Bütün resimler Civita'nın kendisi tarafından, o anki şehre göre çizilir.</p>
       <div class="gallery">
+        <figure><img class="shot" src="img/hero.png" width="1200" height="640" loading="lazy" data-i18n-alt="hero_alt" alt="Tapınağı, limanı ve deniz feneri, agorası, amfitiyatrosu, hamamı, kayalık üstündeki kütüphanesi, su kemeri ve zafer takı olan, bayraklarla süslenmiş bir Civita şehri"><figcaption class="caption" data-i18n="hero_caption">Gerçek bir Civita şehri: her bina, sunucu üyelerinin emeğiyle yükseldi.</figcaption></figure>
         <figure><img class="shot" src="img/young.png" width="1200" height="640" loading="lazy" data-i18n-alt="young_alt" alt="Yeni kurulmuş bir şehir: küçük bir tapınak ve bir zeytinlikte iskele"><figcaption class="caption" data-i18n="young_caption">İlk günler: küçük bir tapınak ve ilk inşaat.</figcaption></figure>
         <figure><img class="shot" src="img/dusk.png" width="1200" height="640" loading="lazy" data-i18n-alt="dusk_alt" alt="Gün batımında gelişmiş bir şehir"><figcaption class="caption" data-i18n="dusk_caption">Gün batımı: meşaleler yanıyor, yeni bir anıt yükseliyor.</figcaption></figure>
         <figure><img class="shot" src="img/night.png" width="1200" height="640" loading="lazy" data-i18n-alt="night_alt" alt="Gece havai fişeklerle kutlama yapan bir şehir"><figcaption class="caption" data-i18n="night_caption">Yılbaşı gecesi: gökyüzünde havai fişekler.</figcaption></figure>
-        <figure><img class="shot" src="img/city-live.gif" width="960" height="512" loading="lazy" data-i18n-alt="animated_alt" alt="Bayram süsleriyle hareketli bir şehir: dalgalanan bayraklar ve caddede yürüyen vatandaşlar"><figcaption class="caption" data-i18n="animated_caption">Premium: hareketli şehir. Vatandaşlar yürür, bayraklar dalgalanır, meşaleler titrer.</figcaption></figure>
         <figure><img class="shot" src="img/welcome.png" width="1000" height="400" loading="lazy" data-i18n-alt="welcome_alt" alt="Defne çelengi içinde bir profil resmi olan hoş geldin kartı"><figcaption class="caption" data-i18n="welcome_caption">Yeni gelen her vatandaşa özel hoş geldin kartı.</figcaption></figure>
       </div>
     </div>
@@ -115,11 +212,11 @@
     <div class="wrap">
       <h2 class="section-title" data-i18n="faq_title">Sık sorulan sorular</h2>
       <div class="faq">
-        <div class="faq-item"><h3 data-i18n="q1">Ücretsiz mi?</h3><p data-i18n="a1">Evet. Şehir oyunu, sunucu araçları, kurulum sihirbazı ve web paneli ücretsizdir ve ücretsiz kalacak. İsteğe bağlı Premium yalnızca süs ve kolaylık ekler (hareketli şehir, şehir temaları, özel hoş geldin kartı, gazete ön sayfası, zamanlanmış duyurular, özel komutlar, birden çok rol menüsü…); oyunda avantaj sağlamaz.</p></div>
-        <div class="faq-item"><h3 data-i18n="q2">Mesajlarımızı okuyor mu?</h3><p data-i18n="a2">Hayır. Civita mesajlarınızın içeriğini okumaz ve saklamaz; yalnızca "biri mesaj yazdı" bilgisini şehre kaynak kazandırmak için kullanır.</p></div>
-        <div class="faq-item"><h3 data-i18n="q3">Hangi dilleri destekliyor?</h3><p data-i18n="a3">Türkçe, İngilizce, Almanca ve İspanyolca. Herkes Civita'yı kendi Discord dilinde görür; yöneticiler isterse sunucu için tek bir dil seçebilir.</p></div>
-        <div class="faq-item"><h3 data-i18n="q4">Nasıl başlarım?</h3><p data-i18n="a4">Civita'yı sunucunuza ekleyin ve sohbete devam edin: duyurular için uygun bir kanalı kendisi seçer, birkaç dakika içinde ilk Meclis oylaması gelir. Sunucunuz yeniyse paneldeki kurulum sihirbazı kanalları ve rolleri sizin için kurar. Yöneticiler her şeyi /kurulum ya da web panelinden değiştirebilir.</p></div>
-        <div class="faq-item"><h3 data-i18n="q5">Başka botlarla çakışır mı?</h3><p data-i18n="a5">Hayır. Hoş geldin mesajı varsayılan olarak kapalıdır; moderasyon araçlarını kullanıp kullanmamak size kalmış.</p></div>
+        <details class="faq-item"><summary data-i18n="q1">Ücretsiz mi?</summary><p data-i18n="a1">Evet. Şehir oyunu, sunucu araçları, kurulum sihirbazı ve web paneli ücretsizdir ve ücretsiz kalacak. İsteğe bağlı Premium yalnızca süs ve kolaylık ekler (hareketli şehir, şehir temaları, özel hoş geldin kartı, gazete ön sayfası, zamanlanmış duyurular, özel komutlar, birden çok rol menüsü…); oyunda avantaj sağlamaz.</p></details>
+        <details class="faq-item"><summary data-i18n="q2">Mesajlarımızı okuyor mu?</summary><p data-i18n="a2">Hayır. Civita mesajlarınızın içeriğini okumaz ve saklamaz; yalnızca "biri mesaj yazdı" bilgisini şehre kaynak kazandırmak için kullanır.</p></details>
+        <details class="faq-item"><summary data-i18n="q3">Hangi dilleri destekliyor?</summary><p data-i18n="a3">Türkçe, İngilizce, Almanca ve İspanyolca. Herkes Civita'yı kendi Discord dilinde görür; yöneticiler isterse sunucu için tek bir dil seçebilir.</p></details>
+        <details class="faq-item"><summary data-i18n="q4">Nasıl başlarım?</summary><p data-i18n="a4">Civita'yı sunucunuza ekleyin ve sohbete devam edin: duyurular için uygun bir kanalı kendisi seçer, birkaç dakika içinde ilk Meclis oylaması gelir. Sunucunuz yeniyse paneldeki kurulum sihirbazı kanalları ve rolleri sizin için kurar. Yöneticiler her şeyi /kurulum ya da web panelinden değiştirebilir.</p></details>
+        <details class="faq-item"><summary data-i18n="q5">Başka botlarla çakışır mı?</summary><p data-i18n="a5">Hayır. Hoş geldin mesajı varsayılan olarak kapalıdır; moderasyon araçlarını kullanıp kullanmamak size kalmış.</p></details>
       </div>
     </div>
   </section>
@@ -147,6 +244,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=2026-11-12b"></script>
+  <script src="app.js?v=2026-11-12c"></script>
 </body>
 </html>
