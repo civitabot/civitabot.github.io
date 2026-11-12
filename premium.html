@@ -4,27 +4,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Civita Premium — extras for your city</title>
-  <meta name="description" content="Civita Premium is an optional per-server subscription: city themes, an animated city, a custom welcome card, a gazette front page, scheduled announcements, custom commands, more role menus, showcase decorations, a custom bot profile and one-year statistics. No gameplay advantage.">
+  <meta name="description" content="Civita Premium is an optional subscription per server: a city crest, the city's story, citizen cards, birthdays, city themes, an animated city, custom welcome cards, a gazette front page, scheduled announcements, custom commands and more. No gameplay advantage.">
   <meta property="og:title" content="Civita Premium">
-  <meta property="og:description" content="Optional extras for your Civita city: themes, decorations, a custom bot profile and one-year statistics.">
-  <meta property="og:image" content="https://civita.kenzai.dev/img/og.png">
+  <meta property="og:description" content="A city crest, the city's story, citizen cards, birthdays, themes and more. No gameplay advantage.">
+  <meta property="og:image" content="https://civita.kenzai.dev/img/premium-city.png">
   <meta property="og:url" content="https://civita.kenzai.dev/premium.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-  <nav class="nav"><div class="wrap"><a class="brand" lang="en" href="index.html">🏛️ Civita</a><a class="link" href="index.html#features">Features</a><a class="link" href="https://civita-panel.kenzai.dev">Dashboard</a><a class="lang" href="premium-tr.html">Türkçe</a></div></nav>
+  <nav class="nav"><div class="wrap"><a class="brand" href="index.html">🏛️ Civita</a><a class="link" href="index.html#features">Features</a><a class="link" href="#features">Premium features</a><a class="link" href="https://civita-panel.kenzai.dev">Dashboard</a><a class="lang" href="premium-tr.html" lang="tr">Türkçe</a></div></nav>
 
   <header class="hero premium-hero">
     <div class="wrap">
       <p class="eyebrow">Civita Premium</p>
       <h1>Extras for your city</h1>
-      <p class="tagline">Civita is free and stays free. Premium is an optional subscription for one Discord server: it makes your city look better and gives admins more tools. It never gives a gameplay advantage.</p>
+      <p class="tagline">Civita is free and will stay free. Premium is an optional subscription for one Discord server: it makes your city look better, gives your community new moments and gives admins more tools. It never gives a gameplay advantage.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://civita-panel.kenzai.dev">Try it free in the dashboard</a>
+        <a class="btn btn-ghost" href="#plans">Pricing</a>
+      </div>
+      <figure><img class="shot" src="img/premium-city.png" width="1200" height="640" alt="A grown Civita city with a crest of a golden owl on purple in the corner and a giant bronze statue on the headland"><figcaption class="caption">A crest in the corner, a World Wonder on the headland: every picture is drawn from the city as it is right now.</figcaption></figure>
     </div>
   </header>
 
-  <section>
+  <section class="alt" id="new">
     <div class="wrap">
+      <h2 class="section-title">New: four Premium features</h2>
+      <p class="section-lead">Every picture is drawn by Civita itself; these come from an imaginary example city.</p>
+
+      <div class="showcase">
+        <figure><img class="shot" src="img/premium-crests.png" width="1200" height="230" loading="lazy" alt="Six city crests: an owl, a trident, a laurel wreath, a ship, a column and a sun"></figure>
+        <div>
+          <p class="badge-new">New</p>
+          <h3>🛡️ City crest</h3>
+          <p>Design a crest of your own: a Greek round shield, a Roman shield or a coin medallion; eight symbols like an owl, a ship or a column, a field colour, gold, silver or bronze and a pattern. It sits like a seal in the corner of the city picture: in /city, the gazette, the showcase and on citizen cards.</p>
+        </div>
+      </div>
+
+      <div class="showcase reverse">
+        <figure><img class="shot" src="img/premium-story-en.gif" width="960" height="568" loading="lazy" alt="An animated picture showing every construction of a city from its founding to today, with dates"></figure>
+        <div>
+          <p class="badge-new">New</p>
+          <h3>📜 The City's Story</h3>
+          <p><code>/chronicle</code> draws an animated picture of every construction from the city's founding to today, frame by frame, with the date and the building. A keepsake to share with your community; the story grows with the city.</p>
+        </div>
+      </div>
+
+      <div class="showcase">
+        <figure><img class="shot" src="img/premium-card-en.png" width="1000" height="440" loading="lazy" alt="A citizen card with a laurel-framed avatar, title, profession, points and a progress bar"></figure>
+        <div>
+          <p class="badge-new">New</p>
+          <h3>🪪 Citizen cards</h3>
+          <p><code>/profile</code> becomes a picture card: the avatar over the city, title and profession, points, rank, badges, contributions and progress to the next title. Every member of the server can use it.</p>
+        </div>
+      </div>
+
+      <div class="showcase reverse">
+        <div class="birthday-art" aria-hidden="true">🎂</div>
+        <div>
+          <p class="badge-new">New</p>
+          <h3>🎂 Birthdays</h3>
+          <p>Members save their birthday (day and month only, no ages). That morning the city celebrates in the announcement channel and can give a role for the day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="wrap">
+      <h2 class="section-title">Pricing</h2>
+      <p class="section-lead">One person buys it, the whole server enjoys it.</p>
       <div class="plans">
         <div class="plan">
           <h2>Monthly</h2>
@@ -35,75 +85,108 @@
           <p class="badge">2 months free</p>
           <h2>Yearly</h2>
           <p class="price">$39 <span>/ year</span></p>
-          <p class="plan-note">For one server. Same features, lower price.</p>
+          <p class="plan-note">For one server. Same features, better price.</p>
         </div>
       </div>
       <p class="plans-cta">
-        <span class="btn btn-primary btn-disabled" aria-disabled="true">Coming soon</span>
+        <a class="btn btn-primary" href="https://civita-panel.kenzai.dev">Try it free in the dashboard</a>
       </p>
-      <p class="caption center">Premium is bought by a server admin from the <a href="https://civita-panel.kenzai.dev">web dashboard</a>. Prices are in US dollars; sales tax or VAT may be added at checkout depending on your country.</p>
+      <p class="caption center">You can preview the themes, the crest, the welcome card and the gazette cover in the dashboard before buying. Purchases are made in the dashboard too and open very soon. Prices are in US dollars; VAT may be added at checkout depending on your country.</p>
     </div>
   </section>
 
-  <section class="alt">
+  <section class="alt" id="features">
     <div class="wrap">
-      <h2 class="section-title">What's included</h2>
-      <p class="section-lead">One person buys it, the whole server enjoys it.</p>
+      <h2 class="section-title">Every Premium feature</h2>
+      <p class="section-lead">Sixteen features, all in one subscription.</p>
       <div class="features">
-        <div class="feature"><div class="icon">🎨</div><h3>City themes</h3><p>Dress your city's picture in a snowy winter, a golden harvest, lantern-lit nights or a golden age, and pick your own flag colour.</p></div>
-        <div class="feature"><div class="icon">🎞️</div><h3>Animated city</h3><p>Your city comes alive in /city and on its showcase page: citizens walk to the forum, flags wave, torches flicker, fireworks burst on festival nights and snow falls in winter.</p></div>
-        <div class="feature"><div class="icon">👑</div><h3>Custom welcome card</h3><p>Greet new members with a golden laurel crown, an olive branch, a meander ring or a sun crown in gold, silver or bronze, a title in ancient letters and your own background.</p></div>
-        <div class="feature"><div class="icon">📜</div><h3>Gazette front page</h3><p>The weekly gazette comes out with an ancient front page: your own paper name and motto, papyrus, marble or basalt paper, inks such as Tyrian purple or Egyptian blue, meander borders and laurel sprigs.</p></div>
-        <div class="feature"><div class="icon">⏰</div><h3>Scheduled announcements</h3><p>Saved messages post themselves at the time you pick: once, every day, every week or every month. Optionally the previous one is removed so the channel stays tidy.</p></div>
-        <div class="feature"><div class="icon">⌨️</div><h3>Custom commands</h3><p>Turn saved messages into your server's own slash commands, like /rules or /events. Answers can be visible to everyone or only to the person who asked.</p></div>
-        <div class="feature"><div class="icon">🎭</div><h3>More role menus</h3><p>Up to five role menus instead of one: games, colours, notifications, each in its own channel. Every menu can be single choice, so members hold just one colour role.</p></div>
-        <div class="feature"><div class="icon">🛡️</div><h3>Advanced moderation history</h3><p>Search the full history by date range, download it for Excel and see how many actions each moderator took.</p></div>
-        <div class="feature"><div class="icon">🖼️</div><h3>Showcase decorations</h3><p>A golden frame and cover decoration on your city's page in the world ranking, plus a short address such as <code>/c/yourcity</code>.</p></div>
-        <div class="feature"><div class="icon">🤖</div><h3>Custom bot profile</h3><p>Put your own banner and bio on Civita's profile card in your server, so it feels like part of your community.</p></div>
-        <div class="feature"><div class="icon">📈</div><h3>One-year statistics</h3><p>Charts in the dashboard go back a full year instead of 90 days, with a yearly summary of your server.</p></div>
+        <div class="feature feature-premium"><div class="icon">🛡️</div><h3>City crest</h3><p>Your own crest on an ancient shield or medallion, in the corner of the city picture.</p></div>
+        <div class="feature feature-premium"><div class="icon">📜</div><h3>The City's Story</h3><p>A shareable animated picture of every construction since the founding.</p></div>
+        <div class="feature feature-premium"><div class="icon">🪪</div><h3>Citizen cards</h3><p>/profile as a picture card: title, profession, points and the city crest.</p></div>
+        <div class="feature feature-premium"><div class="icon">🎂</div><h3>Birthdays</h3><p>The city celebrates its citizens' birthdays in the morning, with an optional role for the day.</p></div>
+        <div class="feature"><div class="icon">🎨</div><h3>City themes</h3><p>Dress your city in a snowy winter, a golden harvest, lantern nights or a golden age; pick the banner colour yourself.</p></div>
+        <div class="feature"><div class="icon">🎞️</div><h3>Animated city</h3><p>Your city comes alive in /city and on the showcase: citizens walk, banners wave, torches flicker; fireworks on festival nights, snow in winter.</p></div>
+        <div class="feature"><div class="icon">👑</div><h3>Custom welcome card</h3><p>A golden laurel crown, an olive branch, a meander or a sun crown; gold, silver or bronze; a title in ancient letters and your own background.</p></div>
+        <div class="feature"><div class="icon">📰</div><h3>Gazette front page</h3><p>The weekly gazette gets an ancient front page: your own name and motto, papyrus, marble or basalt paper, ancient inks.</p></div>
+        <div class="feature"><div class="icon">⏰</div><h3>Scheduled announcements</h3><p>Saved messages go out on their own at the time you pick: once, daily, weekly or monthly.</p></div>
+        <div class="feature"><div class="icon">⌨️</div><h3>Custom commands</h3><p>Turn saved messages into server-only slash commands like /rules or /event (up to 20).</p></div>
+        <div class="feature"><div class="icon">🎭</div><h3>More role menus</h3><p>Five role menus instead of one: games, colours, notifications, each in its own channel.</p></div>
+        <div class="feature"><div class="icon">⚖️</div><h3>Advanced moderation history</h3><p>Search by date range, export to Excel and see a summary per moderator.</p></div>
+        <div class="feature"><div class="icon">🖼️</div><h3>Showcase extras</h3><p>A golden frame, a cover ornament and a short address like <code>/c/your-city</code> for your page in the world ranking.</p></div>
+        <div class="feature"><div class="icon">🤖</div><h3>Server-specific bot profile</h3><p>A cover image and bio on Civita's profile card, just for your server.</p></div>
+        <div class="feature"><div class="icon">📈</div><h3>One year of statistics</h3><p>The dashboard charts go back a full year instead of 90 days.</p></div>
+        <div class="feature"><div class="icon">🏛️</div><h3>And the whole free game</h3><p>Buildings, the Council, expeditions, the World Wonder, the Great Games, professions, the museum: all stay free for everyone.</p></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <h2 class="section-title">Free vs Premium</h2>
+      <h2 class="section-title">In pictures</h2>
+      <div class="gallery">
+        <figure><img class="shot" src="img/premium-themes.png" width="1200" height="640" loading="lazy" alt="The same city in four themes: winter, harvest, lantern night and golden age"><figcaption class="caption">City themes: winter, harvest, lantern night, golden age.</figcaption></figure>
+        <figure><img class="shot" src="img/premium-welcome.png" width="1000" height="400" loading="lazy" alt="A welcome card with an avatar in a golden crown frame and the title Salve"><figcaption class="caption">Custom welcome card: frame, metal and a title in ancient letters.</figcaption></figure>
+        <figure><img class="shot" src="img/premium-gazette.png" loading="lazy" alt="An ancient gazette front page on papyrus named Acta Diurna"><figcaption class="caption">Gazette front page: your own name, paper and ink.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="section-title">Free and Premium</h2>
       <div class="compare-box">
         <table class="compare">
           <thead><tr><th></th><th>Free</th><th>Premium</th></tr></thead>
           <tbody>
-            <tr><td>City game: buildings, Council, events, artifacts, festivals, gazette</td><td>✓</td><td>✓</td></tr>
+            <tr><td>City game: buildings, the Council, events, expeditions, artifacts, festivals, the gazette</td><td>✓</td><td>✓</td></tr>
+            <tr><td>World Wonder, Great Games, professions, museum exhibitions</td><td>✓</td><td>✓</td></tr>
             <tr><td>World ranking and sister cities</td><td>✓</td><td>✓</td></tr>
             <tr><td>Server tools: welcome, verification, moderation, tickets, role menu</td><td>✓</td><td>✓</td></tr>
             <tr><td>Web dashboard</td><td>✓</td><td>✓</td></tr>
+            <tr><td>City crest</td><td>—</td><td>✓</td></tr>
+            <tr><td>The City's Story (/chronicle)</td><td>—</td><td>✓</td></tr>
+            <tr><td>/profile</td><td>Text</td><td>Picture citizen card</td></tr>
+            <tr><td>Birthday celebrations</td><td>—</td><td>✓ and a role for the day</td></tr>
             <tr><td>Statistics</td><td>7 / 30 / 90 days</td><td>Up to 1 year</td></tr>
-            <tr><td>City picture</td><td>Time of day and festivals</td><td>+ themes and flag colour</td></tr>
+            <tr><td>City picture</td><td>Time of day and festivals</td><td>+ themes and banner colour</td></tr>
             <tr><td>City picture in /city</td><td>Still</td><td>Animated</td></tr>
-            <tr><td>Welcome card</td><td>Laurel wreath</td><td>5 frames, 3 metals, title, own background</td></tr>
+            <tr><td>Welcome card</td><td>Laurel wreath</td><td>5 frames, 3 metals, a title, your own background</td></tr>
             <tr><td>Weekly gazette</td><td>City picture</td><td>Front page with your own name, paper and ink</td></tr>
-            <tr><td>Message editor</td><td>Post now</td><td>+ scheduled and repeating posts</td></tr>
+            <tr><td>Message editor</td><td>Send now</td><td>+ scheduled and repeating</td></tr>
             <tr><td>Custom slash commands</td><td>—</td><td>Up to 20</td></tr>
-            <tr><td>Role menus</td><td>1 menu</td><td>Up to 5 menus</td></tr>
+            <tr><td>Role menus</td><td>1 menu</td><td>Up to 5</td></tr>
             <tr><td>Moderation history</td><td>Full history, search and filters</td><td>+ date range, Excel export, moderator summary</td></tr>
             <tr><td>Showcase page</td><td>Standard</td><td>Golden frame, cover, short address</td></tr>
-            <tr><td>Banner and bio on Civita's profile card</td><td>Standard</td><td>Your own</td></tr>
+            <tr><td>Cover and bio on Civita's profile card</td><td>Standard</td><td>Your choice</td></tr>
+            <tr><td>Production, prestige, rewards</td><td>Same</td><td>Same (no advantage)</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <section id="faq" class="alt">
+  <section id="faq">
     <div class="wrap">
       <h2 class="section-title">Questions</h2>
       <div class="faq">
-        <div class="faq-item"><h3>Does Premium make our city stronger?</h3><p>No. Premium cities produce exactly as much as free ones and get no extra prestige, so the world ranking stays fair.</p></div>
+        <div class="faq-item"><h3>Does Premium make our city stronger?</h3><p>No. Premium cities produce exactly the same as free ones, earn the same rewards and get no extra prestige; the world ranking and the Great Games stay fair.</p></div>
+        <div class="faq-item"><h3>Can I try it before buying?</h3><p>Yes. On the dashboard's Premium page you can preview the themes, the city crest, the welcome card and the gazette cover. Saving them needs Premium.</p></div>
         <div class="faq-item"><h3>Will free features become paid later?</h3><p>No. Everything that is free today stays free.</p></div>
-        <div class="faq-item"><h3>How is payment handled?</h3><p>Payments are processed by our reseller, Lemon Squeezy, who acts as the merchant of record. Your card details go to them, never to Civita. You get a receipt by email.</p></div>
-        <div class="faq-item"><h3>How do I cancel?</h3><p>Cancel any time from the dashboard or the link in your receipt. Premium stays active until the end of the period you paid for and does not renew.</p></div>
+        <div class="faq-item"><h3>Is Premium per person or per server?</h3><p>Per server. One admin buys it and everyone on that server enjoys it. If you have several servers, each needs its own subscription.</p></div>
+        <div class="faq-item"><h3>How is payment handled?</h3><p>Payments are handled by our reseller Lemon Squeezy (the "merchant of record"). Your card details go to them and never reach Civita. Your receipt comes by email.</p></div>
+        <div class="faq-item"><h3>How do I cancel?</h3><p>Cancel any time from the dashboard or from the link in your receipt. Premium stays on until the end of the period you paid for and does not renew.</p></div>
         <div class="faq-item"><h3>Can I get a refund?</h3><p>Yes. If Premium isn't for you, email us within 14 days of your first payment and we'll refund it in full.</p></div>
-        <div class="faq-item"><h3>What happens if Civita leaves our server?</h3><p>Premium belongs to the server. If you add Civita back while your subscription is active, everything comes back.</p></div>
+        <div class="faq-item"><h3>Are our settings deleted when Premium ends?</h3><p>No. Your crest, theme, card and gazette settings are kept; they all come back when you turn Premium on again.</p></div>
+        <div class="faq-item"><h3>What if Civita leaves our server?</h3><p>Premium belongs to the server. If you add Civita back while your subscription is running, everything comes back.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section class="alt cta">
+    <div class="wrap">
+      <h2 class="section-title">Dress up your city</h2>
+      <p class="section-lead">Open the Premium page in the dashboard, design your crest, try the themes.</p>
+      <div class="actions"><a class="btn btn-primary" href="https://civita-panel.kenzai.dev">Go to the dashboard</a><a class="btn btn-ghost" href="index.html">Meet Civita</a></div>
     </div>
   </section>
 
