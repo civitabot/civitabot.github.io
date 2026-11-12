@@ -6,7 +6,11 @@
   <link rel="canonical" href="https://civita.kenzai.dev/terms/">
   <meta name="robots" content="noindex">
   <meta http-equiv="refresh" content="0; url=/terms/?lang=tr">
-  <script>location.replace("/terms/?lang=tr");</script>
+  <script>
+    // /premium gibi uzantısız adresle gelindiyse dili zorlamadan yönlen (ziyaretçinin kendi dili kalsın);
+    // yalnızca eski .html linkleri dili belirtir.
+    location.replace(location.pathname.endsWith(".html") ? "/terms/?lang=tr" : "/terms/");
+  </script>
 </head>
 <body><p><a href="/terms/?lang=tr">civita.kenzai.dev/terms/</a></p></body>
 </html>

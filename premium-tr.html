@@ -6,7 +6,11 @@
   <link rel="canonical" href="https://civita.kenzai.dev/premium/">
   <meta name="robots" content="noindex">
   <meta http-equiv="refresh" content="0; url=/premium/?lang=tr">
-  <script>location.replace("/premium/?lang=tr");</script>
+  <script>
+    // /premium gibi uzantısız adresle gelindiyse dili zorlamadan yönlen (ziyaretçinin kendi dili kalsın);
+    // yalnızca eski .html linkleri dili belirtir.
+    location.replace(location.pathname.endsWith(".html") ? "/premium/?lang=tr" : "/premium/");
+  </script>
 </head>
 <body><p><a href="/premium/?lang=tr">civita.kenzai.dev/premium/</a></p></body>
 </html>
