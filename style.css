@@ -111,7 +111,14 @@ h1, h2, h3 {
   margin-right: auto;
 }
 .nav a.link { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; }
-.nav a.link:hover { color: var(--ink); }
+.nav a.link:hover, .nav a.link[aria-current="page"] { color: var(--ink); }
+.btn-small { padding: 8px 16px; font-size: 0.9rem; white-space: nowrap; }
+details.faq-item summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item summary::after { content: "+"; color: var(--gold); font-size: 1.3rem; line-height: 1; }
+details.faq-item[open] summary::after { content: "–"; }
+details.faq-item p { margin-top: 10px; }
+.price .amount { font: inherit; color: inherit; }
 .lang {
   border: 1px solid var(--line);
   background: var(--card);

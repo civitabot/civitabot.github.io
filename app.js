@@ -500,10 +500,6 @@ function setLanguage(lang) {
   document.querySelectorAll("[data-i18n-alt]").forEach((el) => (el.alt = text[el.dataset.i18nAlt] ?? TR[el.dataset.i18nAlt]));
   document.documentElement.lang = lang;
   document.getElementById("lang-select").value = lang;
-  // Hukuki sayfalar Türkçe ve İngilizce; diğer diller İngilizcesine gider.
-  document.getElementById("privacy-link").href = lang === "tr" ? "gizlilik.html" : "privacy.html";
-  document.getElementById("terms-link").href = lang === "tr" ? "kosullar.html" : "terms.html";
-  document.querySelectorAll(".premium-link").forEach((el) => (el.href = lang === "tr" ? "premium-tr.html" : "premium.html"));
   renderCommands(lang);
   try {
     localStorage.setItem("civita-lang", lang);
@@ -513,6 +509,8 @@ function setLanguage(lang) {
 }
 
 function initialLanguage() {
+  const asked = new URLSearchParams(location.search).get("lang");
+  if (LANGUAGES.includes(asked)) return asked;
   try {
     const saved = localStorage.getItem("civita-lang");
     if (LANGUAGES.includes(saved)) return saved;
