@@ -1,7 +1,7 @@
 // Bu dosya scripts/build_site_pages.py tarafından üretilir; elle düzenlemeyin.
 window.CIVITA_TEXTS = {
  "en": {
-  "page_title": "Civita Premium — extras for your city",
+  "page_title": "Civita Premium: extras for your city",
   "page_description": "Civita Premium is an optional subscription per server: a city crest, the city's story, citizen cards, birthdays, themes, an animated city and more. No gameplay advantage.",
   "hero_title": "Extras for your city",
   "hero_text": "Civita is free and will stay free. Premium is an optional subscription for one Discord server: it makes your city look better, gives your community new moments and gives admins more tools. It never gives a gameplay advantage.",
@@ -139,7 +139,7 @@ window.CIVITA_TEXTS = {
   "cta_home": "Meet Civita"
  },
  "de": {
-  "page_title": "Civita Premium — Extras für deine Stadt",
+  "page_title": "Civita Premium: Extras für deine Stadt",
   "page_description": "Civita Premium ist ein optionales Abo pro Server: Stadtwappen, Stadtgeschichte, Bürgerkarten, Geburtstage, Themen, eine animierte Stadt und mehr. Kein Vorteil im Spiel.",
   "hero_title": "Extras für deine Stadt",
   "hero_text": "Civita ist kostenlos und bleibt es. Premium ist ein optionales Abo für einen Discord-Server: Deine Stadt sieht schöner aus, deine Community bekommt neue Momente und Admins mehr Werkzeuge. Es gibt nie einen Vorteil im Spiel.",
@@ -277,7 +277,7 @@ window.CIVITA_TEXTS = {
   "cta_home": "Civita kennenlernen"
  },
  "es": {
-  "page_title": "Civita Premium — extras para tu ciudad",
+  "page_title": "Civita Premium: extras para tu ciudad",
   "page_description": "Civita Premium es una suscripción opcional por servidor: escudo de la ciudad, su historia, tarjetas de ciudadano, cumpleaños, temas, ciudad animada y más. Sin ventaja en el juego.",
   "hero_title": "Extras para tu ciudad",
   "hero_text": "Civita es gratis y lo seguirá siendo. Premium es una suscripción opcional para un servidor de Discord: tu ciudad se ve mejor, tu comunidad vive nuevos momentos y los administradores tienen más herramientas. Nunca da ventaja en el juego.",
